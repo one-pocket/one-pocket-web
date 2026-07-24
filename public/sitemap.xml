@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://onepocketapp.github.io/one-pocket-web/</loc>
+    <loc>https://one-pocket.github.io/one-pocket-web/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://onepocketapp.github.io/one-pocket-web/support</loc>
+    <loc>https://one-pocket.github.io/one-pocket-web/support</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://onepocketapp.github.io/one-pocket-web/privacy</loc>
+    <loc>https://one-pocket.github.io/one-pocket-web/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

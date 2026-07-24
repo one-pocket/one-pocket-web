@@ -2,10 +2,10 @@ import { DOCUMENT, Injectable, inject } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 /** Canonical origin Google should index. Keep in sync with sitemap.xml / robots.txt. */
-export const SITE_URL = 'https://onepocketapp.github.io/one-pocket-web';
+export const SITE_URL = 'https://one-pocket.github.io/one-pocket-web';
 export const SUPPORT_EMAIL = 'capydev.sys@outlook.com';
 const SITE_NAME = 'One Pocket';
-const DEFAULT_IMAGE = `${SITE_URL}/screenshots/app-store-1.png`;
+const DEFAULT_IMAGE = `${SITE_URL}/screenshots/home.png`;
 const DEFAULT_IMAGE_ALT =
   'One Pocket showing a budget with one large remaining amount and a simple ledger';
 
