@@ -1,0 +1,104 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 26px 24px;
+}
+
+.wordmark {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+}
+
+/* The app icon ships with its own paper/ink background; the rounded corners
+   make it read as the app tile rather than a floating pocket. */
+.wordmark-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav a {
+  font-size: 15px;
+  color: var(--text-sub);
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--pill-bg);
+  color: var(--text-sub);
+  cursor: pointer;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
+  background: var(--fill-subtle);
+}
+
+.theme-toggle svg {
+  display: block;
+}
+
+.site-footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 56px;
+  border-top: 1px solid var(--hairline);
+}
+
+.footer-line {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: var(--text-sub);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin-bottom: 14px;
+}
+
+.footer-nav a {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--text);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-faint);
+}

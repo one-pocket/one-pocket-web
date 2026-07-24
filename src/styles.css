@@ -1,0 +1,144 @@
+/* One Pocket — calm paper tones, large typography, one accent.
+   Tokens mirror the app's theme.js (LIGHT/DARK) so the site and the app
+   read as the same object. */
+
+:root {
+  --bg: #fbfbf9;
+  --sheet: #ffffff;
+  --text: #1a1a18;
+  --text-sub: rgba(45, 44, 40, 0.62);
+  --text-muted: rgba(45, 44, 40, 0.45);
+  --text-faint: rgba(45, 44, 40, 0.3);
+  --separator: rgba(45, 44, 40, 0.1);
+  --hairline: rgba(45, 44, 40, 0.08);
+  --fill-subtle: rgba(45, 44, 40, 0.05);
+  --pill-bg: rgba(45, 44, 40, 0.07);
+  --ink: #1a1a18;
+  --ink-contrast: #fbfbf9;
+  --positive: #4e7a5a;
+}
+
+/* Dark is driven by an explicit attribute, not the media query: an inline
+   script in index.html stamps data-theme before first paint (system preference
+   unless the user chose otherwise), so the toggle can override the system and
+   there is no flash. */
+:root[data-theme='dark'] {
+  --bg: #161615;
+  --sheet: #222220;
+  --text: #f4f4f1;
+  --text-sub: rgba(235, 235, 228, 0.62);
+  --text-muted: rgba(235, 235, 228, 0.45);
+  --text-faint: rgba(235, 235, 228, 0.3);
+  --separator: rgba(235, 235, 228, 0.1);
+  --hairline: rgba(235, 235, 228, 0.08);
+  --fill-subtle: rgba(235, 235, 228, 0.06);
+  --pill-bg: rgba(235, 235, 228, 0.1);
+  --ink: #f4f4f1;
+  --ink-contrast: #161615;
+  --positive: #7fa98a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: var(--text-faint);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  text-decoration-color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Paired theme images: only the matching one is shown. CSS keyed to the
+   pre-paint attribute, so the swap happens before first paint — no flash. */
+:root[data-theme='dark'] .theme-light-only {
+  display: none;
+}
+
+:root:not([data-theme='dark']) .theme-dark-only {
+  display: none;
+}
+
+/* --- Shared page scaffold (privacy, support) ----------------------------- */
+
+.page-main {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 72px 24px 96px;
+}
+
+.page-title {
+  margin-bottom: 56px;
+}
+
+.page-title .eyebrow {
+  margin: 0 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.page-title h1 {
+  margin: 0 0 16px;
+  font-size: clamp(30px, 5.5vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.page-title > p:not(.eyebrow) {
+  margin: 0;
+  color: var(--text-sub);
+}
+
+.content section {
+  padding: 28px 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.content section:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.content h2 {
+  margin: 0 0 10px;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.content p {
+  margin: 0 0 10px;
+  color: var(--text-sub);
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}

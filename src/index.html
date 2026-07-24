@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>One Pocket | One goal at a time</title>
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="One Pocket is a tiny budget app for one purpose at a time — a trip, a gift, a project. Set an amount, log what you spend, and watch one number."
+    />
+    <meta name="theme-color" content="#FBFBF9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#161615" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <script>
+      // Runs before first paint: stamp the resolved theme on <html> so CSS and
+      // the paired theme images settle in one go, with no flash. Stored choice
+      // wins; otherwise follow the system preference.
+      (function () {
+        try {
+          var stored = localStorage.getItem('op-theme');
+          var dark = stored
+            ? stored === 'dark'
+            : window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "One Pocket",
+        "description": "One Pocket is a private, local-first budget app for one purpose at a time. Set an amount, log expenses, and watch one number — no accounts, no tracking.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "iOS, Android",
+        "url": "https://onepocketapp.github.io/one-pocket-web/",
+        "image": "https://onepocketapp.github.io/one-pocket-web/screenshots/app-store-1.png",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "CapyDev"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <app-root></app-root>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+.home {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.hero {
+  max-width: 640px;
+  padding: 84px 0 64px;
+}
+
+.hero h1 {
+  margin: 0 0 20px;
+  font-size: clamp(40px, 8vw, 64px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.lede {
+  margin: 0 0 36px;
+  font-size: 19px;
+  color: var(--text-sub);
+  max-width: 34em;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.badges img {
+  height: 48px;
+  width: auto;
+}
+
+/* --- The number ---------------------------------------------------------- */
+
+.number-strip {
+  padding: 56px 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.number {
+  margin: 0;
+  font-size: clamp(64px, 12vw, 112px);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+.number-label {
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.number-track {
+  margin-top: 28px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--fill-subtle);
+  overflow: hidden;
+}
+
+.number-fill {
+  width: 26%;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--positive);
+}
+
+.number-sub {
+  margin: 14px 0 0;
+  font-size: 15px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- Features ------------------------------------------------------------ */
+
+.feature {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 44px 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.feature-text {
+  max-width: 520px;
+}
+
+.feature h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--text-sub);
+}
+
+.feature-art img {
+  width: clamp(140px, 22vw, 220px);
+  height: auto;
+}
+
+@media (max-width: 640px) {
+  .feature {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .feature-art img {
+    width: 160px;
+  }
+}
+
+/* --- Screenshots --------------------------------------------------------- */
+
+.shots {
+  padding: 56px 0;
+  border-top: 1px solid var(--hairline);
+}
+
+.shots-row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  /* Edge-to-edge scroll on small screens without breaking the page column. */
+  margin: 0 -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  scroll-snap-type: x proximity;
+}
+
+.shots-row img {
+  width: clamp(220px, 26vw, 280px);
+  height: auto;
+  flex-shrink: 0;
+  border-radius: 24px;
+  border: 1px solid var(--separator);
+  scroll-snap-align: start;
+}
+
+/* --- Pro ----------------------------------------------------------------- */
+
+.pro {
+  max-width: 640px;
+  padding: 56px 0 88px;
+  border-top: 1px solid var(--hairline);
+}
+
+.pro h2 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.015em;
+}
+
+.pro p {
+  margin: 0;
+  color: var(--text-sub);
+}
