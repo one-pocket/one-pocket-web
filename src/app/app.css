@@ -63,7 +63,18 @@
   background: var(--fill-subtle);
 }
 
-.theme-toggle svg {
+/* Icon swap lives in the component: Angular's view encapsulation adds
+   [_ngcontent] to these selectors, out-specifying the global .theme-*-only
+   hide rules — so the toggle needs its own, keyed on the ancestor attribute. */
+.theme-toggle .theme-dark-only {
+  display: none;
+}
+
+:host-context([data-theme='dark']) .theme-toggle .theme-light-only {
+  display: none;
+}
+
+:host-context([data-theme='dark']) .theme-toggle .theme-dark-only {
   display: block;
 }
 

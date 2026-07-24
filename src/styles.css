@@ -86,10 +86,18 @@ img {
 
 /* --- Shared page scaffold (privacy, support) ----------------------------- */
 
+/* Same 960px column and 24px gutter as the home page and header, so the H1
+   left edge lines up across every page. The text blocks inside keep a readable
+   ~640px measure, anchored left rather than centered. */
 .page-main {
-  max-width: 660px;
+  max-width: 960px;
   margin: 0 auto;
   padding: 72px 24px 96px;
+}
+
+.page-title,
+.page-main .content {
+  max-width: 640px;
 }
 
 .page-title {

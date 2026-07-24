@@ -87,10 +87,6 @@
 /* --- Features ------------------------------------------------------------ */
 
 .feature {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 32px;
   padding: 44px 0;
   border-top: 1px solid var(--hairline);
 }
@@ -111,22 +107,6 @@
   color: var(--text-sub);
 }
 
-.feature-art img {
-  width: clamp(140px, 22vw, 220px);
-  height: auto;
-}
-
-@media (max-width: 640px) {
-  .feature {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .feature-art img {
-    width: 160px;
-  }
-}
-
 /* --- Screenshots --------------------------------------------------------- */
 
 .shots {
@@ -134,33 +114,69 @@
   border-top: 1px solid var(--hairline);
 }
 
+/* --per is how many screenshots fill the viewport: three on desktop, two on
+   phones. The autoplay in home.ts advances by one at a time; native scroll and
+   snap stay intact so touch and keyboard always work. */
 .shots-row {
+  --per: 3;
+  --gap: 20px;
   display: flex;
-  gap: 20px;
+  gap: var(--gap);
   overflow-x: auto;
   padding-bottom: 8px;
   /* Edge-to-edge scroll on small screens without breaking the page column. */
   margin: 0 -24px;
   padding-left: 24px;
   padding-right: 24px;
-  scroll-snap-type: x proximity;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 24px;
+  scrollbar-width: none;
+}
+
+.shots-row::-webkit-scrollbar {
+  display: none;
+}
+
+.shots-row:focus-visible {
+  outline: 2px solid var(--text-faint);
+  outline-offset: 4px;
 }
 
 .shots-row img {
-  width: clamp(220px, 26vw, 280px);
+  flex: 0 0 auto;
+  /* Explicit width + min-width:0, or the image's intrinsic size wins via the
+     flex item's default min-width:auto and each shot fills the whole strip. */
+  width: calc((100% - (var(--per) - 1) * var(--gap)) / var(--per));
+  min-width: 0;
   height: auto;
-  flex-shrink: 0;
   border-radius: 24px;
   border: 1px solid var(--separator);
   scroll-snap-align: start;
 }
 
+@media (max-width: 640px) {
+  .shots-row {
+    --per: 2;
+  }
+}
+
 /* --- Pro ----------------------------------------------------------------- */
 
 .pro {
-  max-width: 640px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
   padding: 56px 0 88px;
   border-top: 1px solid var(--hairline);
+}
+
+.pro-art img {
+  width: 180px;
+  height: auto;
+}
+
+.pro-text {
+  max-width: 560px;
 }
 
 .pro h2 {
@@ -173,4 +189,16 @@
 .pro p {
   margin: 0;
   color: var(--text-sub);
+}
+
+@media (max-width: 640px) {
+  .pro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .pro-art img {
+    width: 132px;
+  }
 }
