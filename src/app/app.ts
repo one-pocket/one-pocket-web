@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
+import { ViewportScroller } from '@angular/common';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { SUPPORT_EMAIL } from './services/seo';
 import { Theme } from './services/theme';
 
 // The whole chrome lives here: three routes don't need header/footer
@@ -13,6 +13,10 @@ import { Theme } from './services/theme';
 })
 export class App {
   protected readonly theme = inject(Theme);
-  protected readonly supportEmail = SUPPORT_EMAIL;
+  private readonly viewportScroller = inject(ViewportScroller);
   protected readonly year = new Date().getFullYear();
+
+  protected scrollToTop(): void {
+    this.viewportScroller.scrollToPosition([0, 0]);
+  }
 }

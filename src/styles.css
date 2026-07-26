@@ -13,6 +13,7 @@
   --hairline: rgba(45, 44, 40, 0.08);
   --fill-subtle: rgba(45, 44, 40, 0.05);
   --pill-bg: rgba(45, 44, 40, 0.07);
+  --theme-icon: #f5c84b;
   --ink: #1a1a18;
   --ink-contrast: #fbfbf9;
   --positive: #4e7a5a;
@@ -33,6 +34,7 @@
   --hairline: rgba(235, 235, 228, 0.08);
   --fill-subtle: rgba(235, 235, 228, 0.06);
   --pill-bg: rgba(235, 235, 228, 0.1);
+  --theme-icon: #f5c84b;
   --ink: #f4f4f1;
   --ink-contrast: #161615;
   --positive: #7fa98a;

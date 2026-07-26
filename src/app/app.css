@@ -50,16 +50,14 @@
   padding: 0;
   border: none;
   border-radius: 50%;
-  background: var(--pill-bg);
-  color: var(--text-sub);
+  background: transparent;
+  color: var(--theme-icon);
   cursor: pointer;
   transition:
-    color 0.15s ease,
     background 0.15s ease;
 }
 
 .theme-toggle:hover {
-  color: var(--text);
   background: var(--fill-subtle);
 }
 
@@ -112,4 +110,10 @@
   margin: 0;
   font-size: 13px;
   color: var(--text-faint);
+}
+
+@media (max-width: 640px) {
+  .wordmark-title {
+    display: none;
+  }
 }

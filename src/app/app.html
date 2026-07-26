@@ -8,7 +8,7 @@
       height="32"
     />
     <img src="icon-dark.png" alt="" class="wordmark-icon theme-dark-only" width="32" height="32" />
-    One Pocket
+    <span class="wordmark-title">One Pocket</span>
   </a>
   <nav class="site-nav" aria-label="Site">
     <a routerLink="/support">Support</a>
@@ -22,7 +22,7 @@
       <!-- Both icons render; CSS shows the sun in light mode, the moon in dark.
       Keeping it CSS-driven (not a signal) means SSR and client HTML match. -->
       <svg class="theme-light-only" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
-        <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.8" />
+        <circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="currentColor" stroke-width="1.8" />
         <g stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
           <line x1="12" y1="2.5" x2="12" y2="5" />
           <line x1="12" y1="19" x2="12" y2="21.5" />
@@ -37,7 +37,7 @@
       <svg class="theme-dark-only" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
         <path
           d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"
-          fill="none"
+          fill="currentColor"
           stroke="currentColor"
           stroke-width="1.8"
           stroke-linejoin="round"
@@ -52,10 +52,9 @@
 <footer class="site-footer">
   <p class="footer-line">One Pocket — one budget, one number.</p>
   <nav class="footer-nav" aria-label="Footer">
-    <a routerLink="/">Home</a>
-    <a routerLink="/support">Support</a>
-    <a routerLink="/privacy">Privacy</a>
-    <a href="mailto:{{ supportEmail }}">{{ supportEmail }}</a>
+    <a routerLink="/" (click)="scrollToTop()">Home</a>
+    <a routerLink="/support" (click)="scrollToTop()">Support</a>
+    <a routerLink="/privacy" (click)="scrollToTop()">Privacy</a>
   </nav>
   <p class="footer-copy">© {{ year }} CapyDev</p>
 </footer>
