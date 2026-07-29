@@ -1,6 +1,12 @@
-# OnePocketWeb
+# One Pocket — marketing site
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.19.
+The website for **One Pocket**, a lightweight budget tracker for a bounded amount of money: _simple budgets for a paycheck, a period, or a purpose._ The app itself lives in the sibling `one-pocket` repo.
+
+A **pocket** is money set aside for a period, a purpose, or both — a paycheck, monthly spending, groceries, a trip, a renovation, school expenses. Create a pocket, set the amount, add expenses, see what remains.
+
+See [CLAUDE.md](CLAUDE.md) for the positioning and copy rules this site must hold to, including the three places the home page's title and description have to stay in sync.
+
+Angular, prerendered to static HTML and deployed to GitHub Pages. Generated with [Angular CLI](https://github.com/angular/angular-cli) 21.2.19.
 
 ## Development server
 

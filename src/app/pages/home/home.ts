@@ -11,9 +11,9 @@ import { Seo } from '../../services/seo';
 export class Home {
   constructor() {
     inject(Seo).update({
-      title: 'One Pocket | One goal at a time',
+      title: 'One Pocket | Simple budgets for a paycheck, a period, or a purpose',
       description:
-        'One Pocket is a tiny budget app for one purpose at a time — a trip, a gift, a project. Set an amount, log what you spend, and watch one number. Private and on-device.',
+        'A lightweight budget tracker for a paycheck, a period, or a purpose — groceries, a trip, monthly spending. Set an amount, add expenses, and always know what you have left. Private and on-device.',
       path: '',
     });
 
