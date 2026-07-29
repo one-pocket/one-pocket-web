@@ -13,7 +13,7 @@ export class Home {
     inject(Seo).update({
       title: 'One Pocket | Simple budgets for a paycheck, a period, or a purpose',
       description:
-        'A lightweight budget tracker for a paycheck, a period, or a purpose — groceries, a trip, monthly spending. Set an amount, add expenses, and always know what you have left. Private and on-device.',
+        'A lightweight budget tracker for a paycheck, a period, or a purpose — groceries, a trip, or monthly spending. Set an amount, add expenses, and always know what you have left. Private and on-device.',
       path: '',
     });
 
